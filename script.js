@@ -12,6 +12,7 @@ function principal(){
     var btn = document.createElement("BUTTON");
     btn.innerHTML = "Start Quiz";
     buttonPlaceEL.appendChild(btn);
+    buttonPlaceEL.addEventListener("click", steptwo);
 
 }
 
@@ -28,6 +29,13 @@ function setTime() {
   }, 1000);
 }
 
+function steptwo(){
+setTime();
+
+
+}
+
+
 function timeOut() {
   mainEl.remove();  
   buttonPlaceEL.remove();
@@ -39,4 +47,4 @@ function timeOut() {
 
 }
 principal();
-setTime();
+// setTime();
