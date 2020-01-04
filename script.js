@@ -555,6 +555,12 @@ function timeOut() {
   var x = document.createElement("INPUT");
   x.setAttribute("type", "text");
   placeholdername.appendChild(x);
+
+  var submitbutton = document.createElement("button");
+  submitbutton.textContent= "Submit";
+//   var check3 = myquestions[4]["answers"][3];
+  placeholdername.appendChild(submitbutton);
+//   buttond.addEventListener("click",function(event){
   
 
 }
