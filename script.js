@@ -39,10 +39,12 @@ buttonPlaceEL.remove();
 setTime();
 mainEl.textContent= " "; 
 tittleEl.textContent = " ";
-var li = document.createElement("li");
+question1();
+}
 
+function question1(){
 tittleEl.innerHTML = myquestions[0]["question"];
-// for (i = 0; i < 4; i++) {
+
 var buttona = document.createElement("button");
 buttona.textContent= myquestions[0]["answers"][0];
 var check0 = myquestions[0]["answers"][0];
@@ -87,6 +89,7 @@ buttonc.addEventListener("click",function(event){
 
 if ( check2 == myquestions[0]["correctanswer"] ){
     mainEl.textContent= "correct answer";
+    question2();
 }
 else{
 
@@ -109,28 +112,84 @@ else{
     mainEl.textContent=" incorrect answer";
 }
 });
-
-
-
-
-
-
-
-
-
 }
 
+function question2(){
+    // tittleEl.textContent = " ";
+    // optionA.parentNode.removeChild("button");
+    
+    
 
-function verification(){
+        tittleEl.innerHTML = myquestions[1]["question"];
+        
+        var buttona = document.createElement("button");
+        buttona.textContent= myquestions[1]["answers"][0];
+        var check0 = myquestions[1]["answers"][0];
+        optionA.appendChild(buttona);
+        buttona.addEventListener("click",function(event){
+        
+        
+        
+        if ( check0 == myquestions[1]["correctanswer"] ){
+            mainEl.textContent= "correct answer";
+        }
+        else{
+        
+            mainEl.textContent=" incorrect answer";
+        }
+        });
+        
+        
+        var buttonb = document.createElement("button");
+        buttonb.textContent= myquestions[1]["answers"][1];
+        var check1= myquestions[1]["answers"][1];
+        optionB.appendChild(buttonb);
+        buttonb.addEventListener("click",function(event){
+        
+        
+        
+        if ( check1 == myquestions[1]["correctanswer"] ){
+            mainEl.textContent= "correct answer";
+        }
+        else{
+        
+            mainEl.textContent=" incorrect answer";
+        }
+        });
+        
+        var buttonc = document.createElement("button");
+        buttonc.textContent= myquestions[1]["answers"][2];
+        var check2 = myquestions[1]["answers"][2];
+        optionC.appendChild(buttonc);
+        buttonc.addEventListener("click",function(event){
+        
+        
+        if ( check2 == myquestions[1]["correctanswer"] ){
+            mainEl.textContent= "correct answer";
+        }
+        else{
+        
+            mainEl.textContent=" incorrect answer";
+        }
+        });
+        
+        var buttond = document.createElement("button");
+        buttond.textContent= myquestions[1]["answers"][3];
+        var check3 = myquestions[1]["answers"][3];
+        optionD.appendChild(buttond);
+        buttond.addEventListener("click",function(event){
+        
+        
+        if ( check3 == myquestions[1]["correctanswer"] ){
+            mainEl.textContent= "correct answer";
+        }
+        else{
+        
+            mainEl.textContent=" incorrect answer";
+        }
+        });
+        }
 
-if (event=== myquestions[0]["correctanswer"]){
-    mainEl.textContent= "correct answer";
-}
-else{
-
-    // mainEl.textContent=" incorrect answer";
-}
-}
 
 
 function timeOut() {
