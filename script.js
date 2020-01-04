@@ -4,7 +4,7 @@ var optionA = document.getElementById("optionA");
 var optionB = document.getElementById("optionB");
 var optionC = document.getElementById("optionC");
 var optionD = document.getElementById("optionD");
-
+var placeholdername= document.getElementById("placeholder");
 var tittleEl = document.querySelector(".tittle");
 var ScoreResultEl = document.querySelector(".ScoreResult");
 var buttonPlaceEL = document.querySelector("#buttonplace");
