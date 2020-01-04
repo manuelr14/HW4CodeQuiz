@@ -27,7 +27,7 @@ function setTime() {
     secondsLeft--;
     timeEl.textContent ="time:" + secondsLeft;
 
-    if(secondsLeft === 0) {
+    if(secondsLeft < 0) {
       clearInterval(timerInterval);
       timeOut();
     }
