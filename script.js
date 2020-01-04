@@ -560,12 +560,9 @@ function timeOut() {
 
   var submitbutton = document.createElement("button");
   submitbutton.textContent= "Submit";
-//   var check3 = myquestions[4]["answers"][3];
+
   placeholdername.appendChild(submitbutton);
-//  submitbutton.addEventListener("click",function(event){
-    // event.preventDefault();
-        // tittleEl.textContent = " ";
-        // tittleEl.textContent = "Highscores";
+
    submitbutton.onclick = saveHighscore;     
 //  }
 // }
@@ -574,7 +571,7 @@ function saveHighscore(){
 
     var name = document.getElementById("input").value;
     mainEl.innerHTML = name;
-
+ window.location.href='highscores.html';
     
     console.log(name);
 }
