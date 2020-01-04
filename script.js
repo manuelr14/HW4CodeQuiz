@@ -8,7 +8,7 @@ var optionD = document.getElementById("optionD");
 var tittleEl = document.querySelector(".tittle");
 var ScoreResultEl = document.querySelector(".ScoreResult");
 var buttonPlaceEL = document.querySelector("#buttonplace");
-var secondsLeft = 1055;
+var secondsLeft = 50;
 var score=0;
 
 function principal(){
@@ -154,10 +154,15 @@ function question2(){
         
         if ( check0 == myquestions[1]["correctanswer"] ){
             mainEl.textContent= "correct answer";
+            question3();
+            score++
         }
         else{
         
             mainEl.textContent=" incorrect answer";
+            question3();
+            score--;
+            secondsLeft= secondsLeft- 15;
         }
         });
         
@@ -172,10 +177,16 @@ function question2(){
         
         if ( check1 == myquestions[1]["correctanswer"] ){
             mainEl.textContent= "correct answer";
+            question3();
+            score++
         }
+        
         else{
         
             mainEl.textContent=" incorrect answer";
+            question3();
+            score--;
+            secondsLeft= secondsLeft- 15;
         }
         });
         
@@ -188,10 +199,16 @@ function question2(){
         
         if ( check2 == myquestions[1]["correctanswer"] ){
             mainEl.textContent= "correct answer";
+            question3();
+            score++
         }
+        
         else{
         
             mainEl.textContent=" incorrect answer";
+            question3();
+            score--;
+            secondsLeft= secondsLeft- 15;
         }
         });
         
@@ -204,22 +221,233 @@ function question2(){
         
         if ( check3 == myquestions[1]["correctanswer"] ){
             mainEl.textContent= "correct answer";
+            question3();
+            score++
         }
+        
         else{
         
             mainEl.textContent=" incorrect answer";
+            question3();
+            score--;
+            secondsLeft= secondsLeft- 15;
         }
         });
         }
 
+        function question3(){
+            optionA.removeChild(optionA.childNodes[0]);
+            optionB.removeChild(optionB.childNodes[0]);
+            optionC.removeChild(optionC.childNodes[0]);
+            optionD.removeChild(optionD.childNodes[0]);
+            
+            
+        
+                tittleEl.innerHTML = myquestions[2]["question"];
+               
+                var buttona = document.createElement("button");
+                buttona.textContent= myquestions[2]["answers"][0];
+                var check0 = myquestions[2]["answers"][0];
+                optionA.appendChild(buttona);
+                buttona.addEventListener("click",function(event){
+                
+                
+                
+                if ( check0 == myquestions[2]["correctanswer"] ){
+                    mainEl.textContent= "correct answer";
+                    question4();
+                    score++
+                }
+                else{
+                
+                    mainEl.textContent=" incorrect answer";
+                    question4();
+                    score--;
+                    secondsLeft= secondsLeft- 15;
+                }
+                });
+                
+                
+                var buttonb = document.createElement("button");
+                buttonb.textContent= myquestions[2]["answers"][1];
+                var check1= myquestions[2]["answers"][1];
+                optionB.appendChild(buttonb);
+                buttonb.addEventListener("click",function(event){
+                
+                
+                
+                if ( check1 == myquestions[2]["correctanswer"] ){
+                    mainEl.textContent= "correct answer";
+                    question4();
+                    score++
+                }
+                
+                else{
+                
+                    mainEl.textContent=" incorrect answer";
+                    question4();
+                    score--;
+                    secondsLeft= secondsLeft- 15;
+                }
+                });
+                
+                var buttonc = document.createElement("button");
+                buttonc.textContent= myquestions[2]["answers"][2];
+                var check2 = myquestions[2]["answers"][2];
+                optionC.appendChild(buttonc);
+                buttonc.addEventListener("click",function(event){
+                
+                
+                if ( check2 == myquestions[2]["correctanswer"] ){
+                    mainEl.textContent= "correct answer";
+                    question4();
+                    score++
+                }
+                
+                else{
+                
+                    mainEl.textContent=" incorrect answer";
+                    question4();
+                    score--;
+                    secondsLeft= secondsLeft- 15;
+                }
+                });
+                
+                var buttond = document.createElement("button");
+                buttond.textContent= myquestions[2]["answers"][3];
+                var check3 = myquestions[2]["answers"][3];
+                optionD.appendChild(buttond);
+                buttond.addEventListener("click",function(event){
+                
+                
+                if ( check3 == myquestions[2]["correctanswer"] ){
+                    mainEl.textContent= "correct answer";
+                    question4();
+                    score++
+                }
+                
+                else{
+                
+                    mainEl.textContent=" incorrect answer";
+                    question4();
+                    score--;
+                    secondsLeft= secondsLeft- 15;
+                }
+                });
+                }
+        function question4(){
+                    optionA.removeChild(optionA.childNodes[0]);
+                    optionB.removeChild(optionB.childNodes[0]);
+                    optionC.removeChild(optionC.childNodes[0]);
+                    optionD.removeChild(optionD.childNodes[0]);
+                    
+                    
+                
+                        tittleEl.innerHTML = myquestions[3]["question"];
+                       
+                        var buttona = document.createElement("button");
+                        buttona.textContent= myquestions[3]["answers"][0];
+                        var check0 = myquestions[3]["answers"][0];
+                        optionA.appendChild(buttona);
+                        buttona.addEventListener("click",function(event){
+                        
+                        
+                        
+                        if ( check0 == myquestions[3]["correctanswer"] ){
+                            mainEl.textContent= "correct answer";
+                            timeOut();
+                            score++
+                        }
+                        else{
+                        
+                            mainEl.textContent=" incorrect answer";
+                            timeOut();
+                            score--;
+                            secondsLeft= secondsLeft- 15;
+                        }
+                        });
+                        
+                        
+                        var buttonb = document.createElement("button");
+                        buttonb.textContent= myquestions[3]["answers"][1];
+                        var check1= myquestions[3]["answers"][1];
+                        optionB.appendChild(buttonb);
+                        buttonb.addEventListener("click",function(event){
+                        
+                        
+                        
+                        if ( check1 == myquestions[3]["correctanswer"] ){
+                            mainEl.textContent= "correct answer";
+                            timeOut();
+                            score++
+                        }
+                        
+                        else{
+                        
+                            mainEl.textContent=" incorrect answer";
+                            timeOut();
+                            score--;
+                            secondsLeft= secondsLeft- 15;
+                        }
+                        });
+                        
+                        var buttonc = document.createElement("button");
+                        buttonc.textContent= myquestions[3]["answers"][2];
+                        var check2 = myquestions[3]["answers"][2];
+                        optionC.appendChild(buttonc);
+                        buttonc.addEventListener("click",function(event){
+                        
+                        
+                        if ( check2 == myquestions[3]["correctanswer"] ){
+                            mainEl.textContent= "correct answer";
+                            timeOut();
+                            score++
+                        }
+                        
+                        else{
+                        
+                            mainEl.textContent=" incorrect answer";
+                            timeOut();
+                            score--;
+                            secondsLeft= secondsLeft- 15;
+                        }
+                        });
+                        
+                        var buttond = document.createElement("button");
+                        buttond.textContent= myquestions[3]["answers"][3];
+                        var check3 = myquestions[3]["answers"][3];
+                        optionD.appendChild(buttond);
+                        buttond.addEventListener("click",function(event){
+                        
+                        
+                        if ( check3 == myquestions[3]["correctanswer"] ){
+                            mainEl.textContent= "correct answer";
+                            timeOut();
+                            score++
+                        }
+                        
+                        else{
+                        
+                            mainEl.textContent=" incorrect answer";
+                            timeOut();
+                            score--;
+                            secondsLeft= secondsLeft- 15;
+                        }
+                        });
+                        }        
 
 
 function timeOut() {
+    optionA.removeChild(optionA.childNodes[0]);
+    optionB.removeChild(optionB.childNodes[0]);
+    optionC.removeChild(optionC.childNodes[0]);
+    optionD.removeChild(optionD.childNodes[0]);
+    
   mainEl.textContent= " ";  
   buttonPlaceEL.remove();
   timeEl.textContent = "time:0" ;
   tittleEl.textContent = "All Done!";
-  ScoreResultEl.textContent = "Your Score is:0"; 
+  ScoreResultEl.textContent = "Your Score is:"+ (score+secondsLeft)
 
   
 
