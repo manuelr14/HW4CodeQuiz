@@ -554,16 +554,32 @@ function timeOut() {
   yournameinput.textContent= "please put your name";
   var x = document.createElement("INPUT");
   x.setAttribute("type", "text");
+  x.setAttribute("value","your name");
+  x.setAttribute("id","input");
   placeholdername.appendChild(x);
 
   var submitbutton = document.createElement("button");
   submitbutton.textContent= "Submit";
 //   var check3 = myquestions[4]["answers"][3];
   placeholdername.appendChild(submitbutton);
-//   buttond.addEventListener("click",function(event){
-  
-
+//  submitbutton.addEventListener("click",function(event){
+    // event.preventDefault();
+        // tittleEl.textContent = " ";
+        // tittleEl.textContent = "Highscores";
+   submitbutton.onclick = saveHighscore;     
+//  }
+// }
 }
+function saveHighscore(){
+
+    var name = document.getElementById("input").value;
+    mainEl.innerHTML = name;
+
+    
+    console.log(name);
+}
+
+
 
 principal();
 // setTime();
