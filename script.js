@@ -1,9 +1,14 @@
 var timeEl = document.querySelector(".timer");
 var mainEl = document.getElementById("main");
+var optionA = document.getElementById("optionA");
+var optionB = document.getElementById("optionB");
+var optionC = document.getElementById("optionC");
+var optionD = document.getElementById("optionD");
+
 var tittleEl = document.querySelector(".tittle");
 var ScoreResultEl = document.querySelector(".ScoreResult");
 var buttonPlaceEL = document.querySelector("#buttonplace");
-var secondsLeft = 5;
+var secondsLeft = 1055;
 
 function principal(){
 
@@ -30,21 +35,101 @@ function setTime() {
 }
 
 function steptwo(){
+buttonPlaceEL.remove();
 setTime();
 mainEl.textContent= " "; 
 tittleEl.textContent = " ";
 var li = document.createElement("li");
+
 tittleEl.innerHTML = myquestions[0]["question"];
+// for (i = 0; i < 4; i++) {
 var buttona = document.createElement("button");
 buttona.textContent= myquestions[0]["answers"][0];
-li.append(buttona);
-mainEl.append(li);
+var check0 = myquestions[0]["answers"][0];
+optionA.appendChild(buttona);
+buttona.addEventListener("click",function(event){
+
+
+
+if ( check0 == myquestions[0]["correctanswer"] ){
+    mainEl.textContent= "correct answer";
+}
+else{
+
+    mainEl.textContent=" incorrect answer";
+}
+});
+
+
+var buttonb = document.createElement("button");
+buttonb.textContent= myquestions[0]["answers"][1];
+var check1= myquestions[0]["answers"][1];
+optionB.appendChild(buttonb);
+buttonb.addEventListener("click",function(event){
+
+
+
+if ( check1 == myquestions[0]["correctanswer"] ){
+    mainEl.textContent= "correct answer";
+}
+else{
+
+    mainEl.textContent=" incorrect answer";
+}
+});
+
+var buttonc = document.createElement("button");
+buttonc.textContent= myquestions[0]["answers"][2];
+var check2 = myquestions[0]["answers"][2];
+optionC.appendChild(buttonc);
+buttonc.addEventListener("click",function(event){
+
+
+if ( check2 == myquestions[0]["correctanswer"] ){
+    mainEl.textContent= "correct answer";
+}
+else{
+
+    mainEl.textContent=" incorrect answer";
+}
+});
+
+var buttond = document.createElement("button");
+buttond.textContent= myquestions[0]["answers"][3];
+var check3 = myquestions[0]["answers"][3];
+optionD.appendChild(buttond);
+buttond.addEventListener("click",function(event){
+
+
+if ( check3 == myquestions[0]["correctanswer"] ){
+    mainEl.textContent= "correct answer";
+}
+else{
+
+    mainEl.textContent=" incorrect answer";
+}
+});
 
 
 
 
 
 
+
+
+
+}
+
+
+function verification(){
+
+if (event=== myquestions[0]["correctanswer"]){
+    mainEl.textContent= "correct answer";
+}
+else{
+
+    // mainEl.textContent=" incorrect answer";
+}
 }
 
 
