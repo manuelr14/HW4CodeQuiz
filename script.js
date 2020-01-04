@@ -31,13 +31,25 @@ function setTime() {
 
 function steptwo(){
 setTime();
+mainEl.textContent= " "; 
+tittleEl.textContent = " ";
+var li = document.createElement("li");
+tittleEl.innerHTML = myquestions[0]["question"];
+var buttona = document.createElement("button");
+buttona.textContent= myquestions[0]["answers"][0];
+li.append(buttona);
+mainEl.append(li);
+
+
+
+
 
 
 }
 
 
 function timeOut() {
-  mainEl.remove();  
+  mainEl.textContent= " ";  
   buttonPlaceEL.remove();
   timeEl.textContent = "time:0" ;
   tittleEl.textContent = "All Done!";
@@ -46,5 +58,6 @@ function timeOut() {
   
 
 }
+
 principal();
 // setTime();
