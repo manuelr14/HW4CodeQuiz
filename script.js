@@ -115,13 +115,15 @@ else{
 }
 
 function question2(){
-    // tittleEl.textContent = " ";
-    // optionA.parentNode.removeChild("button");
+    optionA.removeChild(optionA.childNodes[0]);
+    optionB.removeChild(optionB.childNodes[0]);
+    optionC.removeChild(optionC.childNodes[0]);
+    optionD.removeChild(optionD.childNodes[0]);
     
     
 
         tittleEl.innerHTML = myquestions[1]["question"];
-        
+       
         var buttona = document.createElement("button");
         buttona.textContent= myquestions[1]["answers"][0];
         var check0 = myquestions[1]["answers"][0];
