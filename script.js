@@ -9,6 +9,7 @@ var tittleEl = document.querySelector(".tittle");
 var ScoreResultEl = document.querySelector(".ScoreResult");
 var buttonPlaceEL = document.querySelector("#buttonplace");
 var secondsLeft = 1055;
+var score=0;
 
 function principal(){
 
@@ -55,10 +56,15 @@ buttona.addEventListener("click",function(event){
 
 if ( check0 == myquestions[0]["correctanswer"] ){
     mainEl.textContent= "correct answer";
+    question2();
+    score++
 }
 else{
 
     mainEl.textContent=" incorrect answer";
+    question2();
+    score--;
+    secondsLeft= secondsLeft- 15;
 }
 });
 
@@ -73,10 +79,15 @@ buttonb.addEventListener("click",function(event){
 
 if ( check1 == myquestions[0]["correctanswer"] ){
     mainEl.textContent= "correct answer";
+    question2();
+    score++
 }
 else{
 
     mainEl.textContent=" incorrect answer";
+    question2();
+    score--;
+    secondsLeft= secondsLeft- 15;
 }
 });
 
@@ -90,10 +101,14 @@ buttonc.addEventListener("click",function(event){
 if ( check2 == myquestions[0]["correctanswer"] ){
     mainEl.textContent= "correct answer";
     question2();
+    score++
 }
 else{
 
     mainEl.textContent=" incorrect answer";
+    question2();
+    score--;
+    secondsLeft= secondsLeft- 15;
 }
 });
 
@@ -106,10 +121,15 @@ buttond.addEventListener("click",function(event){
 
 if ( check3 == myquestions[0]["correctanswer"] ){
     mainEl.textContent= "correct answer";
+    question2();
+    score++
 }
 else{
 
     mainEl.textContent=" incorrect answer";
+    question2();
+    score--;
+    secondsLeft= secondsLeft- 15;
 }
 });
 }
