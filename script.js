@@ -550,6 +550,10 @@ function timeOut() {
   ScoreResultEl.textContent = "Your Score is:"+ (score+secondsLeft)
 
   
+  var x = document.createElement("INPUT");
+  x.setAttribute("type", "text");
+  placeholdername.appendChild(x);
+  
 
 }
 
