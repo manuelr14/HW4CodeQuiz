@@ -4,6 +4,7 @@ var optionA = document.getElementById("optionA");
 var optionB = document.getElementById("optionB");
 var optionC = document.getElementById("optionC");
 var optionD = document.getElementById("optionD");
+var yournameinput = document.getElementById("yourname");
 var placeholdername= document.getElementById("placeholder");
 var tittleEl = document.querySelector(".tittle");
 var ScoreResultEl = document.querySelector(".ScoreResult");
@@ -550,6 +551,7 @@ function timeOut() {
   ScoreResultEl.textContent = "Your Score is:"+ (score+secondsLeft)
 
   
+  yournameinput.textContent= "please put your name";
   var x = document.createElement("INPUT");
   x.setAttribute("type", "text");
   placeholdername.appendChild(x);
