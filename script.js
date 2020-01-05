@@ -4,7 +4,7 @@ var optionA = document.getElementById("optionA");
 var optionB = document.getElementById("optionB");
 var optionC = document.getElementById("optionC");
 var optionD = document.getElementById("optionD");
-
+var scorelist= document.getElementById("scorelist");
 var scoreboard= document.getElementById("scoreboard");
 var yournameinput = document.getElementById("yourname");
 var placeholdername= document.getElementById("placeholder");
@@ -154,6 +154,7 @@ function question2(){
        
         var buttona = document.createElement("button");
         buttona.textContent= myquestions[1]["answers"][0];
+        buttona.setAttribute("style","background-color: purple");
         var check0 = myquestions[1]["answers"][0];
         optionA.appendChild(buttona);
         buttona.addEventListener("click",function(event){
@@ -177,6 +178,7 @@ function question2(){
         
         var buttonb = document.createElement("button");
         buttonb.textContent= myquestions[1]["answers"][1];
+        buttonb.setAttribute("style","background-color: purple");
         var check1= myquestions[1]["answers"][1];
         optionB.appendChild(buttonb);
         buttonb.addEventListener("click",function(event){
@@ -200,6 +202,7 @@ function question2(){
         
         var buttonc = document.createElement("button");
         buttonc.textContent= myquestions[1]["answers"][2];
+        buttonc.setAttribute("style","background-color: purple");
         var check2 = myquestions[1]["answers"][2];
         optionC.appendChild(buttonc);
         buttonc.addEventListener("click",function(event){
@@ -222,6 +225,7 @@ function question2(){
         
         var buttond = document.createElement("button");
         buttond.textContent= myquestions[1]["answers"][3];
+        buttond.setAttribute("style","background-color: purple");
         var check3 = myquestions[1]["answers"][3];
         optionD.appendChild(buttond);
         buttond.addEventListener("click",function(event){
@@ -255,6 +259,7 @@ function question2(){
                
                 var buttona = document.createElement("button");
                 buttona.textContent= myquestions[2]["answers"][0];
+                buttona.setAttribute("style","background-color: purple");
                 var check0 = myquestions[2]["answers"][0];
                 optionA.appendChild(buttona);
                 buttona.addEventListener("click",function(event){
@@ -278,6 +283,7 @@ function question2(){
                 
                 var buttonb = document.createElement("button");
                 buttonb.textContent= myquestions[2]["answers"][1];
+                buttonb.setAttribute("style","background-color: purple");
                 var check1= myquestions[2]["answers"][1];
                 optionB.appendChild(buttonb);
                 buttonb.addEventListener("click",function(event){
@@ -301,6 +307,7 @@ function question2(){
                 
                 var buttonc = document.createElement("button");
                 buttonc.textContent= myquestions[2]["answers"][2];
+                buttonc.setAttribute("style","background-color: purple");
                 var check2 = myquestions[2]["answers"][2];
                 optionC.appendChild(buttonc);
                 buttonc.addEventListener("click",function(event){
@@ -323,6 +330,7 @@ function question2(){
                 
                 var buttond = document.createElement("button");
                 buttond.textContent= myquestions[2]["answers"][3];
+                buttond.setAttribute("style","background-color: purple");
                 var check3 = myquestions[2]["answers"][3];
                 optionD.appendChild(buttond);
                 buttond.addEventListener("click",function(event){
@@ -355,6 +363,7 @@ function question2(){
                        
                         var buttona = document.createElement("button");
                         buttona.textContent= myquestions[3]["answers"][0];
+                        buttona.setAttribute("style","background-color: purple");
                         var check0 = myquestions[3]["answers"][0];
                         optionA.appendChild(buttona);
                         buttona.addEventListener("click",function(event){
@@ -378,6 +387,7 @@ function question2(){
                         
                         var buttonb = document.createElement("button");
                         buttonb.textContent= myquestions[3]["answers"][1];
+                        buttonb.setAttribute("style","background-color: purple");
                         var check1= myquestions[3]["answers"][1];
                         optionB.appendChild(buttonb);
                         buttonb.addEventListener("click",function(event){
@@ -401,6 +411,7 @@ function question2(){
                         
                         var buttonc = document.createElement("button");
                         buttonc.textContent= myquestions[3]["answers"][2];
+                        buttonc.setAttribute("style","background-color: purple");
                         var check2 = myquestions[3]["answers"][2];
                         optionC.appendChild(buttonc);
                         buttonc.addEventListener("click",function(event){
@@ -423,6 +434,7 @@ function question2(){
                         
                         var buttond = document.createElement("button");
                         buttond.textContent= myquestions[3]["answers"][3];
+                        buttond.setAttribute("style","background-color: purple");
                         var check3 = myquestions[3]["answers"][3];
                         optionD.appendChild(buttond);
                         buttond.addEventListener("click",function(event){
@@ -455,6 +467,7 @@ function question2(){
                                
                                 var buttona = document.createElement("button");
                                 buttona.textContent= myquestions[4]["answers"][0];
+                                buttona.setAttribute("style","background-color: purple");
                                 var check0 = myquestions[4]["answers"][0];
                                 optionA.appendChild(buttona);
                                 buttona.addEventListener("click",function(event){
@@ -478,6 +491,7 @@ function question2(){
                                 
                                 var buttonb = document.createElement("button");
                                 buttonb.textContent= myquestions[4]["answers"][1];
+                                buttonb.setAttribute("style","background-color: purple");
                                 var check1= myquestions[4]["answers"][1];
                                 optionB.appendChild(buttonb);
                                 buttonb.addEventListener("click",function(event){
@@ -501,6 +515,7 @@ function question2(){
                                 
                                 var buttonc = document.createElement("button");
                                 buttonc.textContent= myquestions[4]["answers"][2];
+                                buttonc.setAttribute("style","background-color: purple");
                                 var check2 = myquestions[4]["answers"][2];
                                 optionC.appendChild(buttonc);
                                 buttonc.addEventListener("click",function(event){
@@ -523,6 +538,7 @@ function question2(){
                                 
                                 var buttond = document.createElement("button");
                                 buttond.textContent= myquestions[4]["answers"][3];
+                                buttond.setAttribute("style","background-color: purple");
                                 var check3 = myquestions[4]["answers"][3];
                                 optionD.appendChild(buttond);
                                 buttond.addEventListener("click",function(event){
@@ -566,6 +582,7 @@ function timeOut() {
   placeholdername.appendChild(x);
 
   var submitbutton = document.createElement("button");
+  submitbutton.setAttribute("style","background-color: purple");
   submitbutton.textContent= "Submit";
 
   placeholdername.appendChild(submitbutton);
@@ -575,31 +592,48 @@ function timeOut() {
 // }
 }
 function saveHighscore(){
-     window.location.href='highscores.html';
-    var name = document.getElementById("input").value;
-    scoreboard.innerHTML = name;
-    // nameScore= name.trim()
+    tittleEl.textContent="Highscores";
+    ScoreResultEl.textContent= " ";
+ 
 
-// if (nameScore === "") {
-        // return;
-    // }
-    // name.push(nameScore);
+    var name = document.getElementById("input").value;
+ 
+  
 
     var li = document.createElement("li");
-    li.textContent = nameScore;
-  scoreboard.appendChild(li);
+    li.textContent=name + score;
+    scorelist.appendChild(li);
 
-var highscoreboard= localStorage.getItem("highscoreboard");
-highscoreboard = name + score ;
 
-// var li = document.createElement("li");
-scoreboard.textContent=highscoreboard;
-// scoreboard.appendChild(li);
+    
+
+  
+
+
+   
+    localStorage.setItem("user", JSON.stringify(name));
+    new String(name);
+  
+   
+   
+   
+
+
+
+    // get most recent submission
+    var lastUser = JSON.parse(localStorage.getItem("user"));
+    lastUser = new Object(localStorage.getItem("user"));
+    console.log("firstname", lastUser);
+
+    scoreboard.appendChild(lastUser);
+    window.location.href='highscores.html';
 
    
 
-console.log(highscoreboard);
+
 }
+// yournameinput.removeChild(yournameinput.childNodes[0]);
+// placeholdername.removeChild(placeholdername.childNodes[0]);
 
 
 
