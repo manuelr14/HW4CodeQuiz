@@ -592,17 +592,23 @@ function timeOut() {
 // }
 }
 function saveHighscore(){
-    tittleEl.textContent="Highscores";
-    ScoreResultEl.textContent= " ";
+    // tittleEl.textContent="Highscores";
+    // ScoreResultEl.textContent= " ";
  
-
+    window.location.href='highscores.html';
     var name = document.getElementById("input").value;
- 
+    localStorage.setItem("user", JSON.stringify(name));
+    new String(name);
   
+    // get most recent submission
+    var lastUser = JSON.parse(localStorage.getItem("user"));
+    lastUser = new Object(localStorage.getItem("user"));
+    console.log("firstname", lastUser);
+
 
     var li = document.createElement("li");
-    li.textContent=name + score;
-    scorelist.appendChild(li);
+    li.textContent=lastUser;
+    scoreboard.appendChild(li);
 
 
     
@@ -611,8 +617,7 @@ function saveHighscore(){
 
 
    
-    localStorage.setItem("user", JSON.stringify(name));
-    new String(name);
+ 
   
    
    
@@ -620,13 +625,8 @@ function saveHighscore(){
 
 
 
-    // get most recent submission
-    var lastUser = JSON.parse(localStorage.getItem("user"));
-    lastUser = new Object(localStorage.getItem("user"));
-    console.log("firstname", lastUser);
-
-    scoreboard.appendChild(lastUser);
-    window.location.href='highscores.html';
+    // scoreboard.appendChild(lastUser);
+  
 
    
 
