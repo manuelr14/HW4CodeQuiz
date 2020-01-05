@@ -4,6 +4,8 @@ var optionA = document.getElementById("optionA");
 var optionB = document.getElementById("optionB");
 var optionC = document.getElementById("optionC");
 var optionD = document.getElementById("optionD");
+
+var scoreboard= document.getElementById("scoreboard");
 var yournameinput = document.getElementById("yourname");
 var placeholdername= document.getElementById("placeholder");
 var tittleEl = document.querySelector(".tittle");
@@ -18,6 +20,7 @@ function principal(){
     mainEl.textContent = "Try to answer the following code-related questions withing the time limit. Keep in mind that incorret answer will penalize your score time by 10 seconds";
     var btn = document.createElement("BUTTON");
     btn.innerHTML = "Start Quiz";
+    btn.setAttribute("style","background-color: purple");
     buttonPlaceEL.appendChild(btn);
     buttonPlaceEL.addEventListener("click", steptwo);
 
@@ -49,6 +52,7 @@ tittleEl.innerHTML = myquestions[0]["question"];
 
 var buttona = document.createElement("button");
 buttona.textContent= myquestions[0]["answers"][0];
+buttona.setAttribute("style","background-color: purple");
 var check0 = myquestions[0]["answers"][0];
 optionA.appendChild(buttona);
 buttona.addEventListener("click",function(event){
@@ -72,6 +76,7 @@ else{
 
 var buttonb = document.createElement("button");
 buttonb.textContent= myquestions[0]["answers"][1];
+buttonb.setAttribute("style","background-color: purple");
 var check1= myquestions[0]["answers"][1];
 optionB.appendChild(buttonb);
 buttonb.addEventListener("click",function(event){
@@ -94,6 +99,7 @@ else{
 
 var buttonc = document.createElement("button");
 buttonc.textContent= myquestions[0]["answers"][2];
+buttonc.setAttribute("style","background-color: purple");
 var check2 = myquestions[0]["answers"][2];
 optionC.appendChild(buttonc);
 buttonc.addEventListener("click",function(event){
@@ -115,6 +121,7 @@ else{
 
 var buttond = document.createElement("button");
 buttond.textContent= myquestions[0]["answers"][3];
+buttond.setAttribute("style","background-color: purple");
 var check3 = myquestions[0]["answers"][3];
 optionD.appendChild(buttond);
 buttond.addEventListener("click",function(event){
@@ -568,12 +575,30 @@ function timeOut() {
 // }
 }
 function saveHighscore(){
-
+     window.location.href='highscores.html';
     var name = document.getElementById("input").value;
-    mainEl.innerHTML = name;
- window.location.href='highscores.html';
-    
-    console.log(name);
+    scoreboard.innerHTML = name;
+    // nameScore= name.trim()
+
+// if (nameScore === "") {
+        // return;
+    // }
+    // name.push(nameScore);
+
+    var li = document.createElement("li");
+    li.textContent = nameScore;
+  scoreboard.appendChild(li);
+
+var highscoreboard= localStorage.getItem("highscoreboard");
+highscoreboard = name + score ;
+
+// var li = document.createElement("li");
+scoreboard.textContent=highscoreboard;
+// scoreboard.appendChild(li);
+
+   
+
+console.log(highscoreboard);
 }
 
 
